@@ -1,0 +1,102 @@
+﻿<!DOCUTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まいの日常</title>
+  <script type="text/javascript"><!--
+   window.document.onmousemove = myGetEvent;
+   function myGetEvent( evt ){ 
+   myEvent = ( evt ) ? evt : window.event;
+   myObj=document.getElementById("cursor").style;
+   myObj.left = document.body.scrollLeft + myEvent.clientX + 15 
+   myObj.top = document.body.scrollTop + myEvent.clientY + 15
+   } 
+  // --></script>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti&subset=latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Crafty+Girls&subset=latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <body background="img/niigata.gif">
+  <embed src="img/home.mp3"width="300"height="100">
+ </head>
+ <body>
+  <div align="center">
+    <div class="header">
+     <h1>Welcome to my Home Page!</h1>
+     <p>このホームページは私が成長するためのいわば踏み台のようなものです。<br />
+      あなたは<a href="http://www.access-counter.net" target="_blank"><img src="http://www.access-counter.net/services/imagedigits/counter.php?aut=98471c06a9be23c306d0a9ce047d1057551c5f31f175a349215d39c2daa45fb0c90a63f3048b15848d7e" alt="無料カウンター" border="0" /></a>人目のお客様です</p><br>
+     <img src="img/104.gif" width="210"height=100" alt="zoo"><br />
+    </div>
+    <div class="main-contents">
+     <ul class="header-list">
+      <li class="menu"><a href="index.html">トップ</a></li>
+      <li class="menu"><a href="about.html">プロフィール</a><li>
+      <li class="menu"><a href="diary.html">日記</a></li>
+      <li class="menu"><a href="gallery.html">アルバム</a></li>
+      <li class="menu"><a href="link.html">リンク集</a></li>
+      <li class="menu"><a href="skedule.html">スケジュール</a></li>
+     </ul>
+     <script src="http://code.jquery.com/jquery.js"></script>
+     <DIV id="cursor"  style="position:absolute"><IMG src="img/umr.gif" width="50" height="51"></DIV>
+    </div>
+  
+    <hr width="1000" color="#CCCCCC" />
+    
+    
+    <div id="announceList" class="mB15">
+    <ul>
+              <li id="alert237124887" class="alert alert-blue">
+          <button class="close">×</button>
+          <strong>お知らせ</strong><a href="http://staff.exblog.jp/237124887/">メニューデザインをリニューアルいたします。</a>
+        </li>
+              <li id="alert237095328" class="alert alert-blue">
+          <button class="close">×</button>
+          <strong>お知らせ</strong><a href="http://staff.exblog.jp/237095328/">管理人、帰省のお知らせ（8月11日～13日）</a>
+        </li>
+              <li id="alert237090708" class="alert alert-blue">
+          <button class="close">×</button>
+          <strong>お知らせ</strong><a href="http://staff.exblog.jp/237090708/">まいの日常をリニューアルいたします。</a>
+        </li>
+      </ul>
+    
+      <script>
+        $(function () {
+          if (!!window['localStorage']) {
+            var key = 'announces';
+            var announces = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+
+            for (var i = 0; i < announces.length; i++) {
+              var announce = announces[i];
+              $('.alert').each(function () {
+                if ($(this).attr('id') == announce) {
+                  $(this).addClass('disNon');
+                }
+              });
+            }
+
+            $('#announceList .close').click(function () {
+              alertID = $(this).parent().attr("id");
+              announces.push(alertID);
+              localStorage.setItem(key, JSON.stringify(announces));
+            });
+          }
+        });
+      </script>
+    
+    </div>
+    
+    
+    
+
+    <p><strong>やっほー！<br />
+    久しぶりにホームページを作ってみたよ！<br />
+    私の日々の生活が伺えるサイトです?(誰も興味ない)<br />
+    頑張って更新するのでよろしくねー♪</strong></p><br /><br />
+
+    <div class="footer">
+ 
+    <hr width="1000" color="#CCCCCC" />
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ </body>
+</html>

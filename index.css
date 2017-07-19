@@ -1,0 +1,27 @@
+/*共通デザイン*/
+
+body {
+ color: pink;
+ font-family: Calligraffitti, sans-serif;
+}
+
+h1{
+ font-size:60px;
+ border-bottom:1px;
+}
+
+p{
+ color:#939200;
+ font-size:24px;
+}
+
+.header-list{
+ list-style:none;
+ padding:5px 10px
+ font-family: "Crafty Girls", sans-serif;
+}
+
+.menu{
+ float:left;
+ padding:30px 60px;
+}
